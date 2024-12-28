@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "chilltopia",
+	"version": "${version}",
+	"name": "Chilltopia",
+	"description": "Hope is the pilllar that hold up the world",
+	"authors": [ "Leonard Bengtsson" ],
+	"contact": {
+		"sources": "https://github.com/LeonardBengtsson/chilltopia-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/chilltopia/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"chilltopia.Chilltopia"
+		],
+		"client": [
+			"chilltopia.ChilltopiaClient"
+		]
+	},
+	"mixins": [
+		"chilltopia.mixins.json",
+		{
+			"config": "chilltopia.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
